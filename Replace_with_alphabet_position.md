@@ -29,3 +29,12 @@ function alphabetPosition(text) {
   }
   return result.slice(0, result.length - 1);
 }
+
+2.
+function alphabetPosition(text) {
+  return text
+    .toUpperCase()
+    .match(/[a-z]/gi)
+    .map( (c) => c.charCodeAt() - 64)
+    .join(' ');
+}
