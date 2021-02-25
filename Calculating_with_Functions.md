@@ -79,6 +79,6 @@ function times(right) {
   return function(left) { return left * right; };
 }
 function dividedBy(right) {
-  return function(left) { return left / right; };
+  return function(left) { return parseInt(left / right); };
 
 
