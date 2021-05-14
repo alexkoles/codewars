@@ -36,3 +36,8 @@ function firstNonRepeatingLetter(s) {
     return ''; 
 }
 
+
+3.
+function firstNonRepeatingLetter(s){
+  return s.split('').find(e => s.match(new RegExp(`${e}`, 'gi')).length === 1) || ''
+}
