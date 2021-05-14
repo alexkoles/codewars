@@ -25,13 +25,14 @@ return res;
 
 2.
 function firstNonRepeatingLetter(s) {
-  for (let i = 0; i < s.length; i++) {
-    let char = s[i];
-        
-    if (s.indexOf(char) == i && s.indexOf(char, i + 1) == -1) {
-    console.log(char);
-      return char;
+  slc = s.toLowerCase();
+  for (let i = 0; i < slc.length; i++) {
+    let char = slc[i];
+    let baseChar = s[i];
+    if (slc.indexOf(char) == i && slc.indexOf(char, i + 1) == -1) {
+      return baseChar;
     }
   }
-  return [];
+    return ''; 
 }
+
